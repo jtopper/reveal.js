@@ -352,8 +352,8 @@ body {
           transition-duration: 400ms; }
 
 .reveal[data-transition-speed="slow"] .slides section {
-  -webkit-transition-duration: 1200ms;
-          transition-duration: 1200ms; }
+  -webkit-transition-duration: 2000ms;
+          transition-duration: 2000ms; }
 
 /* Slide-specific transition speed overrides */
 .reveal .slides section[data-transition-speed="fast"] {
