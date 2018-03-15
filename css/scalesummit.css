@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.reveal {
+    font-family: "Roboto Slab", Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+    color: #222; 
+}
+
+.reveal table th, .reveal table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.timetable-row *:nth-child(1), .timetable-odd-row *:nth-child(1) {
+    font-weight: bold;
+}
+
+tbody tr:nth-child(2) {
+    font-style: italic;
+}
