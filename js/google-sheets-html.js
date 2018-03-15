@@ -33,8 +33,6 @@ function handleQueryResponse(response) {
     var timetables = document.querySelectorAll('div.timetable');
     for (var i = 0, element; element = timetables[i]; i++) {
 
-        console.log("timetable div found");
-
         visualization = new google.visualization.Table(element);
         visualization.draw(data, {
             allowHtml: true,
