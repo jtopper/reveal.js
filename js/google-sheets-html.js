@@ -23,7 +23,7 @@ function drawVisualization() {
 
 function handleQueryResponse(response) {
     if (response.isError()) {
-        alert('There was a problem with your query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+        // alert('There was a problem with your query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
         return;
     }
     var data = response.getDataTable();
