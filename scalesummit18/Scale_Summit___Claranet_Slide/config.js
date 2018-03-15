@@ -1,0 +1,1 @@
+IDRViewer.config = {"pagecount":1,"title":"PowerPoint Presentation","author":"Sandy Simcox","fileName":"Scale_Summit___Claranet_Slide.pdf","bounds":[[1100,825]],"bookmarks":[],"thumbnailType":"jpg","pageType":"svg","pageLabels":[]};

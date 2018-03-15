@@ -15,7 +15,8 @@ google.load('visualization', '1', {
 var visualization;
 
 function drawVisualization() {
-    var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=19wBYPRVM5tBYRZtDhCYkfx7lMDwXX15X4xlA0MjhRgo&output=html&usp=sharing&range=B2:D11');
+    var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/19wBYPRVM5tBYRZtDhCYkfx7lMDwXX15X4xlA0MjhRgo/gviz/tq?output=html&amp;usp=sharing&amp;range=B2:D10');
+    // var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=19wBYPRVM5tBYRZtDhCYkfx7lMDwXX15X4xlA0MjhRgo&output=html&usp=sharing&range=B2:D11');
     //  query.setQuery('SELECT A, B, C, D label A "Duration", B "Song", C "Requested By", D "URL"');
     query.setQuery('SELECT B, C, D label B "Room", C "Now", D "Next"');
     query.send(handleQueryResponse);
@@ -23,13 +24,16 @@ function drawVisualization() {
 
 function handleQueryResponse(response) {
     if (response.isError()) {
-        // alert('There was a problem with your query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+        alert('There was a problem with your query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
         return;
     }
     var data = response.getDataTable();
+    data.removeRows(10, 4);
 
     var timetables = document.querySelectorAll('div.timetable');
     for (var i = 0, element; element = timetables[i]; i++) {
+
+        console.log("timetable div found");
 
         visualization = new google.visualization.Table(element);
         visualization.draw(data, {

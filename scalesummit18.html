@@ -26,7 +26,7 @@
 			</section>
 
 			<section data-autoslide="5000">
-				<object type="image/svg+xml" data="scalesummit18/claranet.svg" style="border: none; max-width: 100%; box-shadow: none;"></object>
+				<object type="image/svg+xml" data="scalesummit18/Scale_Summit___Claranet_Slide/1.svg" style="border: none; max-width: 100%; box-shadow: none;"></object>
 			</section>
 			<section data-state="timetable" data-autoslide="10000">
 				<div class="timetable"></div>
@@ -59,7 +59,9 @@
 				minScale: 1,
 				maxScale: 1
 			});
-			Reveal.addEventListener( 'timetable', drawVisualization );
+			// Reveal.addEventListener( 'timetable', drawVisualization );
+			google.setOnLoadCallback(drawVisualization);
+			window.setInterval(drawVisualization, 60 * 1000);
 		</script>
 </body>
 
